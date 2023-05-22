@@ -16,7 +16,7 @@ const ServicesInSubCategoriesList = ({id}) => {
   }, [])
 
   return (
-    <View>
+    <View className="bg-black">
     <FlatList
      data={Data}
      renderItem={({ item }) => (

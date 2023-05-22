@@ -13,7 +13,14 @@ const SubCategoryPage = () => {
       
     <Stack.Screen
       options={{
-        headerTitle:"",
+        headerTitle:"Sub-Categories",
+        headerTitleStyle : {
+          color : 'white',
+          fontFamily : "SPOTFONT"
+        },
+        headerStyle : {
+          backgroundColor : "black",
+        },
         headerLeft : () => (
           <BackBtn/>
         )       

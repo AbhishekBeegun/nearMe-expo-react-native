@@ -18,7 +18,14 @@ const index = () => {
     <SafeAreaView>
         <Stack.Screen
         options={{
-        headerTitle:"NearMe APP",  
+        headerTitle:"ProServ APP",  
+        headerTitleStyle : {
+          color : 'white',
+          fontFamily : "SPOTFONT"
+        },
+        headerStyle : {
+          backgroundColor : "black",
+        },
         headerLeft : () => (
             <SideBarBtn/>
           )

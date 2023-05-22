@@ -5,7 +5,7 @@ import { urlFor } from "../../../lib/client";
 
 const Singleimage = ({image}) => {
   return (
-    <View className="h-[45vh] w-[100vw] relative">
+    <View className="h-[45vh] w-[100vw] relative bg-black ">
 
       <View className="absolute z-10 top-1/2 right-2">
         <Text className="text-white text-lg bg-black p-1 rounded-xl font-semibold">
@@ -14,7 +14,7 @@ const Singleimage = ({image}) => {
       </View>
     <Image 
     resizeMode="cover"
-    className="h-full w-full rounded-b-xl"
+    className="h-full w-full opacity-80"
     source={{uri : `${urlFor(image)}`}}>
         
     </Image>

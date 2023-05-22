@@ -17,7 +17,7 @@ const CategoriesList = () => {
   }, [])
 
   return (
-    <View className="py-4">
+    <View className="py-4 bg-black">
      <FlatList 
         data={Data}
         renderItem={({ item }) => (

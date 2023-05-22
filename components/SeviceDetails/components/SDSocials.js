@@ -5,20 +5,20 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 const SDSocials = () => {
   return (
     <View className="flex flex-row justify-evenly items-center w-full py-4">
-        <TouchableOpacity>
-        <FontAwesome5 name="tiktok" size={24} color="black" />
+        <TouchableOpacity className="bg-[#222222] px-4 py-2 rounded-xl">
+        <FontAwesome5 name="tiktok" size={24} color="white" />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-        <FontAwesome5 name="facebook-f" size={24} color="black" /> 
+        <TouchableOpacity className="bg-[#222222] px-4 py-2 rounded-xl">
+        <FontAwesome5 name="facebook-f" size={24} color="white" /> 
         </TouchableOpacity>
 
-        <TouchableOpacity>
-        <FontAwesome5 name="whatsapp" size={24} color="black" />
+        <TouchableOpacity className="bg-[#222222] px-4 py-2 rounded-xl">
+        <FontAwesome5 name="whatsapp" size={24} color="white" />
         </TouchableOpacity>
 
-        <TouchableOpacity>
-        <MaterialCommunityIcons name="web" size={24} color="black" />
+        <TouchableOpacity className="bg-[#222222] px-4 py-2 rounded-xl">
+        <MaterialCommunityIcons name="web" size={24} color="white" />
         </TouchableOpacity>
     </View>
   )

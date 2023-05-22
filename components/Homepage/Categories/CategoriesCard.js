@@ -15,7 +15,7 @@ const CategoriesCard = ({item}) => {
   return (
     <TouchableOpacity
     onPress={() => handleCategoryOnPress()}    
-    className="rounded-xl h-[150px] flex flex-col justify-between items-center">
+    className="rounded-xl h-[150px] flex flex-col justify-between items-center border">
     
     <View className="h-3/4 w-full rounded-t-xl">
       <Image className="h-full w-full rounded-t-xl"
@@ -24,7 +24,10 @@ const CategoriesCard = ({item}) => {
     </View>
     
     <View className="h-1/4 w-full flex justify-center items-center">
-    <Text>
+    <Text
+    className="text-white"
+    style={{fontFamily : "SPOTFONT"}}
+    >
         {item.title}
     </Text>
     </View>

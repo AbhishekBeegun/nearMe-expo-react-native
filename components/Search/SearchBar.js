@@ -15,10 +15,11 @@ const SearchBar = () => {
   }
 
   return (
-    <View className="px-2 flex flex-col">
+    <View className="px-2 flex flex-col bg-black">
      
      <View className="flex flex-col py-4 px-8">
      <Text
+     className="text-white"
       style={{fontFamily : "SPOTFONT"}}
      >What service do you need 
      </Text>

@@ -19,8 +19,8 @@ const ServiceCardTop = ({item}) => {
 
     <View>
     {premiumCompany ? 
-    <View className="absolute top-1 left-1 z-10 bg-black rounded-full">
-    <MaterialIcons name="verified" size={24} color="orange" />
+    <View className="absolute top-1 left-1 z-10 rounded-full">
+    <MaterialIcons name="verified" size={20} color="orange" />
     </View>
     : null
     } 
@@ -29,7 +29,7 @@ const ServiceCardTop = ({item}) => {
     <Image
       resizeMode="cover"
    source={{uri : `${urlFor(item.mainImage)}` }}
-    className="h-[80px] w-[80px] rounded-full border"/>
+    className="h-[80px] w-[80px] rounded-full border "/>
 
     </View>
 
@@ -38,14 +38,16 @@ const ServiceCardTop = ({item}) => {
     {/* title + premium or not */}
     <View className="flex flex-row justify-center items-center gap-5">
     <Text
-    className=""
+    className="text-white"
     style={{fontFamily : "SPOTFONT"}}
     >{item.name}</Text>                
     </View>
 
     {/* location */}
     <View>
-    <Text style={{fontFamily : "SPOTFONT"}}>Location</Text>
+    <Text
+    className="text-white"
+    style={{fontFamily : "SPOTFONT"}}>Location</Text>
     </View>
     </View>
     </TouchableOpacity>

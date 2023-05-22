@@ -11,7 +11,14 @@ const ServicesList = () => {
     <SafeAreaView>
         <Stack.Screen
       options={{
-        headerTitle:"",
+        headerTitle:"Services",
+        headerTitleStyle : {
+          color : 'white',
+          fontFamily : "SPOTFONT"
+        },
+        headerStyle : {
+          backgroundColor : "black",
+        },
         headerLeft : () => (
         <BackBtn/>
         )       

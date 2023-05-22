@@ -6,7 +6,7 @@ import SDImage from "./components/SDImage"
 import SDTitleLocation from "./components/SDTitleLocation"
 import SDGrid from "./components/SDGrid"
 import SDOpeningHours from "./components/SDOpeningHours"
-import SDAbout from "./components/SDAbout"
+// import SDAbout from "./components/SDAbout"
 import SDFixedBtn from "./components/SDFixedBtn"
 import SDSocials from "./components/SDSocials"
 import { getServiceFull } from "../../lib/client"
@@ -22,20 +22,18 @@ const ServiceDetails = ({id}) => {
       .catch(console.error)      
   }, [])
 
-  console.log(Data)
-
   return (
-    <>
+    <View>
     <FlatList 
          data={Data}
          renderItem={({ item }) => (
-          <View className="flex flex-col justify-center items-center relative">
+          <View className="flex flex-col justify-center items-center relative bg-black">
           <SDImage images={item.images}/>
           <SDTitleLocation name={item.name}/>
           <SDGrid/>
           <SDOpeningHours/>
           <SDSocials/>
-          <SDAbout/>
+          {/* <SDAbout/> */}
           <SDFixedBtn />
       </View>
            )}
@@ -44,7 +42,7 @@ const ServiceDetails = ({id}) => {
 
     />
 
-    </>
+    </View>
   )
 }
 
