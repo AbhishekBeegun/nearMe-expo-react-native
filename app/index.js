@@ -1,5 +1,6 @@
 import React from 'react'
 import { Stack } from "expo-router"
+import "react-native-url-polyfill/auto"
 import { View,SafeAreaView,FlatList,Text, ScrollView } from "react-native"
 import SideBarBtn from "../components/Sidebar/SideBarBtn"
 import SearchBar from "../components/Search/SearchBar"

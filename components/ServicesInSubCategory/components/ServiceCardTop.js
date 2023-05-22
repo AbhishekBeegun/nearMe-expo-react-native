@@ -1,18 +1,16 @@
 import React from 'react'
 import { View,Text,Image, TouchableOpacity } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
+import {urlFor} from "../../../lib/client"
 
-
-const ServiceCardTop = () => {
+const ServiceCardTop = ({item}) => {
 
     const premiumCompany = true ;
   return (
     <TouchableOpacity 
-    className="flex flex-row items-center justify-center w-3/4 px-4">
-    
- 
+    className="flex flex-row items-center justify-center w-3/4 px-2">
 
-    <>
+    <View>
     {premiumCompany ? 
     <View className="absolute top-5 left-2 z-10 bg-black rounded-full">
     <MaterialIcons name="verified" size={24} color="orange" />
@@ -22,10 +20,11 @@ const ServiceCardTop = () => {
     
     {/* Image */}
     <Image
-    source={{uri : "https://static.spotboye.com/uploads/Aaliyah-Kashyap_2021-6-9-9-11-2_thumbnail.jpg"}}
-    className="h-[90px] w-[90px] rounded-full border">
-    </Image>
-    </>
+      resizeMode="cover"
+   source={{uri : `${urlFor(item.mainImage)}` }}
+    className="h-[80px] w-[80px] rounded-full border"/>
+
+    </View>
 
 
     <View className="flex flex-col justify-center px-5">  
@@ -34,7 +33,7 @@ const ServiceCardTop = () => {
     <Text
     className="text-lg"
     style={{fontFamily : "SPOTFONT"}}
-    >Title/Name</Text>                
+    >{item.name}</Text>                
     </View>
 
     {/* location */}
@@ -42,9 +41,6 @@ const ServiceCardTop = () => {
     <Text style={{fontFamily : "SPOTFONT"}}>Location</Text>
     </View>
     </View>
-
-
-
     </TouchableOpacity>
   )
 }

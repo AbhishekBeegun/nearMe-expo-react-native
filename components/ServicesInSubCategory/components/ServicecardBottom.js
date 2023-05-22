@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 const ServicecardBottom = () => {
   return (
-    <View className="flex flex-col justify-evenly h-full w-1/4 py-4 pr-1">
+    <View className="flex flex-col justify-evenly items-center h-full w-1/4 py-4">
         <TouchableOpacity className="h-1/2 w-full rounded-t-lg flex justify-center items-center ">
         <Ionicons name="ios-call-sharp" size={24} color="blue" />
         </TouchableOpacity>

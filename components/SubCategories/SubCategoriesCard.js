@@ -1,18 +1,30 @@
 import React from 'react'
-import { View,Text,TouchableOpacity } from "react-native"
+import { useRouter} from "expo-router";
+import { View,Text,TouchableOpacity,Image } from "react-native"
+import { urlFor } from "../../lib/client"
 
 
 const SubCategoriesCard = ({item}) => {
+  const router = useRouter()
+
+  const handleSubCategoryOnPress = () => {
+    router.push(`/services/${item._id}`);  
+  };
   return (
-    <TouchableOpacity className="rounded-xl h-[150px] flex flex-col justify-between items-center">
+    <TouchableOpacity
+    onPress={() => handleSubCategoryOnPress()}
     
-    <View className="h-3/4 w-full bg-red-500 rounded-t-xl">
-      <Text>Image</Text>
+    className="rounded-xl h-[150px] flex flex-col justify-between items-center">
+    
+    <View className="h-3/4 w-full rounded-t-xl">
+    <Image className="h-full w-full rounded-t-xl"
+           resizeMode="cover"
+           source={{uri : `${urlFor(item.mainImage)}` }} />
     </View>
     
     <View className="h-1/4 w-full flex justify-center items-center">
     <Text>
-        SubCategorie Name
+        {item.title}
     </Text>
     </View>
     </TouchableOpacity>

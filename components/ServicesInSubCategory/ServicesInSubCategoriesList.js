@@ -1,14 +1,25 @@
 import React from 'react'
-import { FlatList,View } from "react-native"
-import ServiceCard from "./ServiceCard"
+import { useState } from "react";
+import { useEffect } from "react";
+import { FlatList,View,Text } from "react-native"
+import ServiceCard from "../ServicesInSubCategory/ServiceCard"
+import { getServices } from "../../lib/client";
 
-const ServicesInSubCategoriesList = () => {
 
-    const services =  [1,2,3,4,5,6,7,8,9,10]
+const ServicesInSubCategoriesList = ({id}) => {
+
+  const [Data, setData] = useState()
+
+  useEffect(() => {
+      getServices(id).then((data) => setData(data))
+      .catch(console.error)      
+  }, [])
+
+
   return (
-    <>
+    <View>
     <FlatList
-     data={services}
+     data={Data}
      renderItem={({ item }) => (
          <View style={{ flex: 1, flexDirection: 'column', margin: 6}}>
            <ServiceCard
@@ -21,7 +32,7 @@ const ServicesInSubCategoriesList = () => {
        keyExtractor={(item, index) => index}
     
     />
-    </>
+    </View>
   )
 }
 

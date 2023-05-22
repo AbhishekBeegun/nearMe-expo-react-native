@@ -1,16 +1,24 @@
 import React from 'react'
+import { useState } from "react";
+import { useEffect } from "react";
 import { FlatList,View } from "react-native"
 import SubCategoriesCard from "./SubCategoriesCard"
 
-const SubCategoriesList = () => {
+import { getSubCategories } from "../../lib/client";
 
-    const fakesubcategorieslist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+const SubCategoriesList = ({id}) => {
 
+  const [Data, setData] = useState()
+
+  useEffect(() => {
+      getSubCategories(id).then((data) => setData(data))
+      .catch(console.error)      
+  }, [])
   return (
     
     <View className="py-4">
      <FlatList 
-        data={fakesubcategorieslist}
+        data={Data}
         renderItem={({ item }) => (
             <View style={{ flex: 1, flexDirection: 'column', margin: 6}}>
               <SubCategoriesCard
