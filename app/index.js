@@ -15,8 +15,6 @@ const index = () => {
 
   return (
     <SafeAreaView>
-        <ScrollView>
-
         <Stack.Screen
         options={{
         headerTitle:"NearMe APP",  
@@ -26,18 +24,14 @@ const index = () => {
 
         }}/>
 
-        <SearchBar />
-{/* 
-        <CategoriesList />     
-
-        <SubCategoriesList />  */}
-
+        <FlatList 
+        ListHeaderComponent={<SearchBar/>}
+        ListEmptyComponent={<CategoriesList/>}
+        // ListFooterComponent={<OC/>}
+        />
+        {/* <SubCategoriesList />  */}
         {/* <ServiceInSubCategoriesList /> */}
-
-        
-       <ServiceDetails/>
-        </ScrollView>
-
+       {/* <ServiceDetails/> */}
     </SafeAreaView>
   )
 }
