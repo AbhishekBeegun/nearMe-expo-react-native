@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import { useEffect } from "react";
-import { FlatList,View,Text } from "react-native"
+import { FlatList,View} from "react-native"
 import ServiceCard from "../ServicesInSubCategory/ServiceCard"
 import { getServices } from "../../lib/client";
 
@@ -14,7 +14,6 @@ const ServicesInSubCategoriesList = ({id}) => {
       getServices(id).then((data) => setData(data))
       .catch(console.error)      
   }, [])
-
 
   return (
     <View>

@@ -5,9 +5,9 @@ import ServicecardBottom from "./components/ServicecardBottom"
 
 
 const ServiceCard = ({item}) => {
-  console.log(item)
+
   return (
-    <View className="h-[120px] flex flex-row px-8">
+    <View className="h-[120px] flex flex-row pl-4">
     <ServiceCardTop
     item={item}
     />
