@@ -6,7 +6,7 @@ const SDTitleLocation = ({name}) => {
     <View className="flex flex-col items-center gap-2 mt-2 rounded-t-xl">
     <Text 
     style={{fontFamily : "SPOTFONT"}}
-    className="text-xl text-white font-semibold pt-4">
+    className="text-xl text-white font-semibold pt-2">
        {name}
     </Text>
     <Text 

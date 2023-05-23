@@ -5,6 +5,7 @@ import { FlatList,View } from "react-native"
 import CategoriesCard from "./CategoriesCard"
 
 import { getCategories } from "../../../lib/client";
+import CategoriesSkeleton from "../../Skeleton/CategoriesSkeleton";
 
 
 const CategoriesList = () => {
@@ -18,6 +19,7 @@ const CategoriesList = () => {
 
   return (
     <View className="py-4 bg-black">
+     {Data ? 
      <FlatList 
         data={Data}
         renderItem={({ item }) => (
@@ -31,6 +33,8 @@ const CategoriesList = () => {
           numColumns={2}
           keyExtractor={(item, index) => index}
         />
+      :
+      <CategoriesSkeleton />}
     </View>
   )
 }

@@ -19,7 +19,7 @@ const ServiceCardTop = ({item}) => {
 
     <View>
     {premiumCompany ? 
-    <View className="absolute top-1 left-1 z-10 rounded-full">
+    <View className="absolute bottom-1 right-1 z-10 rounded-full">
     <MaterialIcons name="verified" size={20} color="orange" />
     </View>
     : null
@@ -34,7 +34,7 @@ const ServiceCardTop = ({item}) => {
     </View>
 
 
-    <View className="flex flex-col justify-center px-4">  
+    <View className="flex flex-col justify-around h-[80px] px-4">  
     {/* title + premium or not */}
     <View className="flex flex-row justify-center items-center gap-5">
     <Text
@@ -50,6 +50,8 @@ const ServiceCardTop = ({item}) => {
     style={{fontFamily : "SPOTFONT"}}>Location</Text>
     </View>
     </View>
+
+
     </TouchableOpacity>
   )
 }

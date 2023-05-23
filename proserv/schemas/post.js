@@ -46,10 +46,26 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'subcategory'}}],
     }),
+
     defineField({
-      name: 'about',
-      title: 'About',
-      type: 'blockContent',
+      name: 'location',
+      title: 'location',
+      type: 'string',
     }),
+    defineField({
+      name: 'phonenumber',
+      title: 'phonenumber',
+      type: 'string',
+    }),
+    defineField({
+      name: 'discount',
+      title: 'discount',
+      type: 'string',
+    }),
+    {
+      title: 'Premium User?',
+      name: 'Premium',
+      type: 'boolean'
+    }
   ],
 })
